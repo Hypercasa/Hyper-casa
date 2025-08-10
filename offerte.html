@@ -6,10 +6,12 @@
   <style>
     body {
       margin: 0;
-      padding: 20px;
+      padding: 0;
       font-family: Arial, sans-serif;
-      background-color: black;
+      background: url('sfondo.jpg') no-repeat center center fixed;
+      background-size: cover;
       text-align: center;
+      box-sizing: border-box;
     }
 
     h1 {
@@ -17,26 +19,36 @@
       margin-bottom: 30px;
     }
 
+    /* Container flex */
+    .offerta-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Box offerta */
     .offerta {
       background: rgb(71, 243, 28);
       border-radius: 10px;
       padding: 20px;
-      margin: 20px auto;
-      max-width: 600px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
     }
 
     .offerta img {
       width: 100%;
-      max-height: 400px;
-      object-fit: cover;
+      height: auto;
       border-radius: 10px;
+      
     }
 
     .prezzo {
       font-size: 1.3em;
       margin-top: 10px;
-      color: #555;
+      color: #000;
     }
 
     .prezzo span {
@@ -49,30 +61,87 @@
       color: #999;
       margin-right: 10px;
     }
+
+    /* Responsive da mobile */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .offerta {
+        max-width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <h2 style="
+    color: yellow;
+    background: red;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 2em;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 800px;
+    ">
+    🎉 -20% | -30% SU TUTTI GLI ARTICOLI ESTIVI 🎉 SOLO PER POCHI GIORNI!
+  </h2>
+
   <h1>Offerte Speciali di HYPER CASA</h1>
 
-  <div class="offerta">
-    <img src="tende.jpg" alt="Tende di bambù">
-    <div class="prezzo">
-      <span>-30%</span> sulle tende di bambù!
+  <div class="offerta-container">
+    <div class="offerta">
+      <img src="tende.jpg" alt="Tende di bambù">
+      <div class="prezzo">
+        <span>-30%</span> sulle tende di bambù!
+      </div>
     </div>
-  </div>
 
-  <div class="offerta">
-    <img src="spiaggine.jpg" alt="Spiaggine colorate">
-    <div class="prezzo">
-      Spiaggine colorate solo <span>7,99€</span>
+    <div class="offerta">
+      <img src="spiaggine.jpg" alt="Spiaggine colorate">
+      <div class="prezzo">
+        Spiaggine colorate solo <span>7,99€</span>
+      </div>
     </div>
-  </div>
 
-  <div class="offerta">
-    <img src="carta.jpg" alt="Carta igienica dollaro">
-    <div class="prezzo">
-      <span class="sconto">1,79€</span> ora a <span>1,59€</span>
+    <div class="offerta">
+      <img src="carta.jpg" alt="Carta igienica dollaro">
+      <div class="prezzo">
+       Carta igienica a forma di dollaro: <br> <span class="sconto">1.75</span> → <span>1.59</span><br>
+      </div>
     </div>
+
+    <div class="offerta">
+      <img src="valigia.jpg" alt="Set di valigie 3 misure">
+      <div class="prezzo">
+         <span>-30%</span> su tutte le valigie!
+       <br><br>
+         Grande: <span class="sconto">49,90€</span> → <span>34,90€</span><br>
+         Media: <span class="sconto">34,90€</span> → <span>24,40€</span><br>
+         Piccola: <span class="sconto">29,90€</span> → <span>20,90€</span>
+      </div>
+    </div>
+
+    <div class="offerta">
+      <img src="stendi.jpg" alt="Stendi abiti Gimi Jolly Silver">
+        <div class="prezzo">
+         <span>-33%</span>Stendi abiti Jolly Silver!<br><br>
+         Misure: 181.5 × 55 × 88 cm<br>
+          <span class="sconto">15,00€</span> → <span>9,99€</span>
+        </div>
+    </div>
+
+     <div class="offerta">
+      <img src="ventilatore.jpg" alt="Ventilatori scontati">
+      <div class="prezzo">
+      <span>-20%</span> su tutti i modelli di ventilatore!
+      </div>
+
+    </div>
+
+
   </div>
 </body>
 </html>
